@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+#hero-infos,
+#hero-results {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-family: 'Bubblegum Sans', sans-serif;
+    font-size: 24px;
+}
+
+input {
+    font-size: 20px;
+}
+
+@keyframes blink {
+	0%,
+	50%,
+	100% {
+        filter: brightness(100%);
+	}
+
+	25%,
+	75% {
+        filter: brightness(130%);
+	}
+}
+
+.progress-bar {
+    width: 70%;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    background-color: #3498db;
+    width: 0;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.high-level {
+    animation: blink 5s linear 0s infinite normal forwards;
+}
+
+#message {
+    font-size: 24px;
+    text-align: center;
+}
